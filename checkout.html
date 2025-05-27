@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Shop3D</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Shop3D</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Checkout</h1>
+    </section>
+
+    <section class="checkout-form">
+        <form id="checkoutForm">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="text" placeholder="Shipping Address" required />
+            <input type="text" placeholder="Card Number" required />
+            <input type="text" placeholder="Expiry (MM/YY)" required />
+            <input type="text" placeholder="CVV" required />
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("shop3d_cart");
+            alert("Order placed successfully!");
+            window.location.href = "index.html";
+        });
+    </script>
+    <script src="auth.js"></script>
+</body>
+
+</html>

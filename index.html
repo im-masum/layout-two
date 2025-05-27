@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D E-Commerce</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Shop3D</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="auth.html">Sign Up</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle" />
+          <span class="slider round"></span> Dark Mode
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Explore 3D Shopping Experience</h1>
+    <p>Interactive. Innovative. Intuitive.</p>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="productGrid">
+      <div class="card" data-title="Shoe" data-price="59">
+        <img src="product1.jpg" alt="Shoe" />
+        <h3>Shoe</h3>
+        <p>$59</p>
+        <button onclick="addToCart('Shoe', 59)">Add to Cart</button>
+      </div>
+
+      <div class="card" data-title="Headphone" data-price="99">
+        <img src="product2.jpg" alt="Headphone" />
+        <h3>Headphone</h3>
+        <p>$99</p>
+        <button onclick="addToCart('Headphone', 99)">Add to Cart</button>
+      </div>
+      <div class="card" data-title="Toy" data-price="29">
+        <img src="product3.jpg" alt="Toy" />
+        <h3>Toy</h3>
+        <p>$29</p>
+        <button onclick="addToCart('Toy', 29)">Add to Cart</button>
+      </div>
+        <div class="card" data-title="Shoe" data-price="59">
+          <img src="product1.jpg" alt="Shoe" />
+          <h3>Shoe</h3>
+          <p>$59</p>
+          <button onclick="addToCart('Shoe', 59)">Add to Cart</button>
+        </div>
+      </div>
+  </section>
+
+  <!-- Inside the <body> -->
+  <section class="hero">
+    <h1>Explore 3D Shopping Experience</h1>
+    <p>Interactive. Innovative. Intuitive.</p>
+    <a href="#products" class="btn-cta">Shop Now</a>
+  </section>
+
+  <!-- Product Search and Filter -->
+  <section class="filter-section">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="men">Men</option>
+      <option value="women">Women</option>
+      <option value="kids">Kids</option>
+    </select>
+  </section>
+
+  <!-- Products Section -->
+
+  <section class="products" id="products">
+    <div class="card" data-category="men">
+      <a href="product.html"><img src="product1.jpg" alt="Shoe" /></a>
+      <h3>Shoe</h3>
+    </div>
+    <div class="card" data-category="women">
+      <a href="product.html"><img src="product2.jpg" alt="Headphone" /></a>
+      <h3>Headphone</h3>
+    </div>
+    <div class="card" data-category="kids">
+      <a href="product.html"><img src="product3.jpg" alt="Toy" /></a>
+      <h3>Toy</h3>
+    </div>
+  </section>
+
+  
+
+  <!-- Newsletter in Footer -->
+  <section class="footer" id="footer">
+    <h2>Stay Connected</h2>
+    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+
+    <div class="footer-content">
+      <div class="footer-logo"></div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Subscribe to our Newsletter</h4>
+        <input type="email" placeholder="Your email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Shop3D. All rights reserved.</p>
+  </section>
+
+
+  <script src="js/script.js"></script>
+
+  <!-- At the bottom before </body> -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.hero', { duration: 1000, origin: 'top', distance: '50px' });
+    ScrollReveal().reveal('.products .card', { interval: 200, origin: 'bottom', distance: '30px' });
+    ScrollReveal().reveal('.filter-section, footer', { origin: 'left', distance: '50px', duration: 800 });
+  </script>
+
+
+</body>
+
+</html>
