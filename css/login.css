@@ -1,0 +1,94 @@
+/* Login Container */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Login Header */
+.login-header {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.login-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.login-form input:focus {
+    border-color: #1976d2;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 14px;
+    background: #1976d2;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #1565c0;
+}
+
+/* Error Message */
+.login-error {
+    color: #e53935;
+    font-size: 0.98rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Link */
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 16px 8px;
+    }
+    .login-header {
+        font-size: 1.5rem;
+    }
+}

@@ -58,7 +58,7 @@ section {
     border: 1px solid var(--card-border);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(240, 238, 238, 0.1);
-    margin: 2rem auto;
+    margin: 1rem auto;
     position: relative;
 
 }
