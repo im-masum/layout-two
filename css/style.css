@@ -1,3 +1,33 @@
+:root{
+    --primary-color: #ff6600;
+    --secondary-color: #333;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --card-background: #fff;
+    --card-hover-background: #f9f9f9;
+    --button-background: #ff6347;
+    --button-hover-background: #e5533d;
+    --navbar-background: #111;
+    --footer-background: #111;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+
+body.dark {
+    --background-color: #02030e;
+    --text-color: #e0e0e0;
+    --card-background: #0b1023;
+    --card-hover-background: #333;
+    --button-background: #ff6347;
+    --button-hover-background: #e5533d;
+    --navbar-background: #000;
+    --footer-background: #000;
+    --link-color: #66b2ff;
+    --link-hover-color: #3399ff;
+    
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +35,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Dark Mode */
+
 body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-
 
 }
 
@@ -25,7 +56,8 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: #ddd5d5;
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin: 5px auto;
@@ -41,8 +73,8 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #111;
-    color: white;
+    background: var(--navbar-background);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -75,7 +107,7 @@ section {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -345,21 +377,6 @@ section {
         border: 1px solid #ccc;
     }
 
-    /* Dark Mode */
-    body.dark {
-        background: #121212;
-        color: #eee;
-    }
-
-    body.dark .card {
-        background: #222;
-        color: #fff;
-    }
-
-    body.dark .navbar,
-    body.dark footer {
-        background: #000;
-    }
 
     /* Toggle Switch */
     .dark-mode-toggle {
